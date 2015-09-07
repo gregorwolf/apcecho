@@ -1,0 +1,31 @@
+<core:View xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m" controllerName="com.sap.scn.gw.apcecho.view.Feed"
+  xmlns:html="http://www.w3.org/1999/xhtml">
+  <Page title="Feed">
+    <content>
+      <FeedInput xmlns="sap.m"
+        id="feedInput"
+        enabled="true"
+        placeholder="Post something here"
+        value=""
+        showIcon="false"
+        buttonTooltip="Submit"
+        post="onPost">
+      </FeedInput>
+      <List xmlns="sap.m"
+        id="list"
+        showSeparators="Inner"
+        showNoData="true"
+        items="{/EntityCollection}" >
+        <FeedListItem xmlns="sap.m"
+          id="feedItem"
+          showIcon="false"
+          sender="{LS_MESSAGE/USER}"
+          timestamp="{Date}"
+          text="{LS_MESSAGE/TEXT}"
+          />
+      </List>
+    </content>
+  </Page>
+</core:View>
