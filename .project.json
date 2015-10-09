@@ -15,7 +15,7 @@
   },
   "deploy": {
     "destination": "NPL",
-    "name": "ZAPCECHO"
+    "name": "ZDEMOTP"
   },
   "hcpdeploy": {
     "account": "p598692trial",

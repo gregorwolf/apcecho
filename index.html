@@ -9,16 +9,20 @@
 				data-sap-ui-libs="sap.m"
 				data-sap-ui-xx-bindingSyntax="complex"
 				data-sap-ui-resourceroots='{"com.sap.scn.gw.apcecho": "./"}'
-				data-sap-ui-theme="sap_bluecrystal">
+				data-sap-ui-theme="sap_bluecrystal"
+        data-sap-ui-preload="async"
+        data-sap-ui-xx-supportedLanguages="en">
 		</script>
 		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
 		
 		<script>
+      sap.ui.getCore().attachInit(function(){
 				sap.ui.localResources("view");
 				var app = new sap.m.App({initialPage:"idFeed"});
 				var page = sap.ui.view({id:"idFeed", viewName:"com.sap.scn.gw.apcecho.view.Feed", type:sap.ui.core.mvc.ViewType.XML});
 				app.addPage(page);
 				app.placeAt("content");
+      });
 		</script>
 	</head>
 	<body class="sapUiBody" role="application">
