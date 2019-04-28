@@ -6,7 +6,8 @@
       "target": {
         "type": "service",
         "name": "sapui5",
-        "entryPath": "/resources"
+        "entryPath": "/resources",
+        "version": "1.52.4"
       },
       "description": "SAPUI5 Resources"
     },
@@ -15,16 +16,17 @@
       "target": {
         "type": "service",
         "name": "sapui5",
-        "entryPath": "/test-resources"
+        "entryPath": "/test-resources",
+        "version": "1.52.4"
       },
       "description": "SAPUI5 Test Resources"
     },
     {
-      "path": "/ui5_execute_abap",
+      "path": "/sap/",
       "target": {
         "type": "destination",
-        "name": "NPL",
-        "entryPath": "/sap/bc/ui5_ui5"
+        "name": "NPL_BASIC_AUTH",
+        "entryPath": "/sap/"
       },
       "description": "NPL"
     }
